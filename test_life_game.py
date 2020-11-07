@@ -3,16 +3,16 @@ import unittest
 class Grid():
 
     def __init__(self):
-        pass
+        self.grid = {}
 
     def is_dead(self, x, y):
-        return True
+        return not self.is_alive(x, y)
 
     def set_alive(self, x, y):
-        self.cell = True
+        self.grid[(x,y)] = True
 
     def is_alive(self, x, y):
-        return True
+        return self.grid[(x,y)]
 
 class TestMain(unittest.TestCase):
 
