@@ -3,7 +3,7 @@ import unittest
 class Grid():
 
     def __init__(self):
-        self.grid = {}
+        self.grid = {(0,0): False}
 
     def is_dead(self, x, y):
         return not self.is_alive(x, y)
